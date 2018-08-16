@@ -1,0 +1,20 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Create New User
+  link(href='createUser.css' type='text/css' rel='stylesheet')
+  script(src='createUser.js' defer='')
+#headerText
+  h1 start a new account
+#overCreate
+  #createUser
+    form#usernamepassword
+      label Email Address:
+      input(type='email' placeholder='email')
+      label Password:
+      input(type='password' placeholder='create a password')
+  #buttons
+    button(type='submit' id='signUp') Sign Up
+    button(type='submit' id='cancel') Cancel
