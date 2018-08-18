@@ -13,12 +13,14 @@ head
   img(src='public/img/settings.png' id='settingsIcon' name='settings' title='log out')
 .modal
   .modal-content
-    form
+    form(method='POST' action='')
     | Location:
     input(type='text' name='location' id='location')
     br
     | Reminder:
-    input(type='text' name='reminder' id = 'reminder')
+    input(type='textarea' name='reminder' id = 'reminder')
+    br
+    button(id='saveButton') SAVE
   span.close-button &times;
 #welcomeMessage
 img(src='public/img/dokologo1.png' id='clickDoko' name='doko' title='click doko!')

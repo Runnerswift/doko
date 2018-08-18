@@ -83,6 +83,14 @@ html {
   margin: 5px;
 }
 
+.modal-content > #saveButton {
+  border-radius: 0.25rem;
+  color: darkviolet;
+  width: 100px;
+  height: 25px;
+  margin-top: 4px;
+}
+
 .close-button {
   float: right;
   width: 1.5rem;
