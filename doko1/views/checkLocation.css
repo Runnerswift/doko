@@ -79,16 +79,31 @@ html {
 }
 
 .modal-content > #location , #reminder {
+  display: flex;
+  flex-direction: row;
+  flex-grow: inherit;
+  flex-shrink: inherit;
+  flex-wrap: wrap;
+  justify-items: center;
+  padding: 10px;
   border-radius: 5px;
   margin: 5px;
 }
 
+.modal-content > #reminder {
+  height: 100px;
+  width: 100%;
+}
+
 .modal-content > #saveButton {
+  display: flex;
+  flex-direction: row;
   border-radius: 0.25rem;
   color: darkviolet;
   width: 100px;
   height: 25px;
   margin-top: 4px;
+  text-align: center;
 }
 
 .close-button {
