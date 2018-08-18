@@ -4,11 +4,10 @@
   "description": "doko app",
   "main": "index.js",
   "dependencies": {
-    "browserify": "^16.2.2",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "mdbootstrap": "^4.5.9",
-    "mongodb": "^3.1.1",
+    "mongodb": "^3.1.3",
     "pug": "^2.0.3"
   },
   "devDependencies": {},
