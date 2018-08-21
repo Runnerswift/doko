@@ -78,21 +78,26 @@ html {
   border-radius: 0.5rem;
 }
 
-.modal-content > #location , #reminder {
+.modal-content > #location {
   display: flex;
   flex-direction: row;
   flex-grow: inherit;
   flex-shrink: inherit;
   flex-wrap: wrap;
   justify-items: center;
-  padding: 10px;
   border-radius: 5px;
   margin: 5px;
 }
 
 .modal-content > #reminder {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  flex-wrap: wrap;
   height: 100px;
   width: 100%;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .modal-content > #saveButton {
@@ -103,7 +108,6 @@ html {
   width: 100px;
   height: 25px;
   margin-top: 4px;
-  text-align: center;
 }
 
 .close-button {

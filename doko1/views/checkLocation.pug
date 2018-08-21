@@ -14,11 +14,10 @@ head
 .modal
   .modal-content
     form(method='POST' action='')
-    | Location:
+    label Location:
     input(type='text' name='location' id='location')
     br
-    | Reminder:
-    input(type='textarea' name='reminder' id = 'reminder')
+    input(type='textarea' name='reminder' rows='4' id = 'reminder' placeholder='type your reminder here')
     br
     button(id='saveButton') SAVE
   span.close-button &times;
