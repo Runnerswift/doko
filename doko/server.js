@@ -1,5 +1,5 @@
 const express = require('express');
-const sweetalert = require('sweetalert');
+const jquery = require('jquery');
 const app = express();
 const port = 3000;
 const router = express.Router();
@@ -19,6 +19,10 @@ app.get('/checkLocation', (req, res) => {
   res.render('checkLocation');
 });
 
+app.get('/createReminder', (req, res) => {
+  res.render('createReminder');
+})
+
 app.get('/myReminders', (req, res) => {
   res.render('myReminders');
 });
@@ -26,15 +30,3 @@ app.get('/myReminders', (req, res) => {
 app.get('/createUser', (req, res) => {
   res.render('createUser');
 });
-
-/*
-const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017';
-  MongoClient.connect(url, function(err, client) {
-    const dokoReminders = db.dokoReminders('reminders');
-      dokoReminders.find({}).toArray((error, documents) => {
-        client.close();
-        res.render('index', { documents: documents });
-        });
-  });
-*/

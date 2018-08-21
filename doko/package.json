@@ -4,18 +4,23 @@
   "description": "doko app",
   "main": "index.js",
   "dependencies": {
-    "browserify": "^16.2.2",
     "express": "^4.16.3",
-    "mongodb": "^3.1.1",
-    "pug": "^2.0.3",
-    "sweetalert": "^2.1.0"
+    "jquery": "^3.3.1",
+    "mdbootstrap": "^4.5.9",
+    "mongodb": "^3.1.3",
+    "pug": "^2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node server.js"
   },
   "keywords": [],
   "author": "tobi taylor",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "8.11.3"
+  }
 }

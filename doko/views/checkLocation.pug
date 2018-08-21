@@ -11,6 +11,16 @@ head
   img(src='public/img/new.png' id='newIcon' name='new reminder' title='new reminder')
   img(src='public/img/reminders.png' id='remindersIcon' name='reminders' title='reminders')
   img(src='public/img/settings.png' id='settingsIcon' name='settings' title='log out')
+.modal
+  .modal-content
+    form(method='POST' action='')
+    label Location:
+    input(type='text' name='location' id='location')
+    br
+    input(type='textarea' name='reminder' rows='4' id = 'reminder' placeholder='type your reminder here')
+    br
+    button(id='saveButton') SAVE
+  span.close-button &times;
 #welcomeMessage
 img(src='public/img/dokologo1.png' id='clickDoko' name='doko' title='click doko!')
 p#clickMessage

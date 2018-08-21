@@ -1,0 +1,32 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title doko: check location
+  link(href='createReminder.css' type='text/css' rel='stylesheet')
+  script(src='createReminder.js' defer)
+
+#usermenu
+  img(src='public/img/home.png' id='homeIcon' name='home' title='home')
+  img(src='public/img/new.png' id='newIcon' name='new reminder' title='new reminder')
+  img(src='public/img/reminders.png' id='remindersIcon' name='reminders' title='reminders')
+  img(src='public/img/settings.png' id='settingsIcon' name='settings' title='log out')
+
+#modalContactForm.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header.text-center
+        h4.modal-title.w-100.font-weight-bold New Reminder
+        .md-form.mb-5
+          i.fa.fa-tag.prefix.white-text
+          input#form32.form-control.validate(type='text')
+          label(data-error='wrong' data-success='right' for='form32') Location
+        .md-form
+          i.fa.fa-pencil.prefix.grey-text
+          textarea#form8.md-textarea.form-control(type='textarea' rows='4')
+          label(data-error='wrong' data-success='right' for='form8') Reminder
+      .modal-footer.d-flex.justify-content-center
+        button.btn.btn-unique
+          | Save 
+          i.fa.fa-paper-plane-o.ml-1
