@@ -1,0 +1,60 @@
+html {
+  background-color: #690c62;
+  color: darkpurple;
+  font-family: Yu Mincho, Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+#h1 , #h3 {
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: white;
+}
+
+#dokologo {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#dokologo > img {
+  padding: 0px;
+  height: 100px;
+  width: 100px;
+  margin-bottom:20px;
+}
+
+input[type="email"], input[type="password"] {
+border-radius: 10px;
+margin: 5px;
+text-align: center;
+border: 1px solid rgb(116, 27, 101);
+}
+
+p {
+    color: white;
+}
+
+button {
+background-color: #af5da2;
+color: white;
+border-radius: 10px;
+display: inline-block;
+font-display: Yu Mincho, Helvetica, Arial, sans-serif;
+letter-spacing: 1px;
+}
+
+#createuser {
+    font-size:12px;
+}
+
+#createuser > p > a {
+  text-decoration: none;
+  color:white;
+}
+
+#createuser > p > a:hover {
+  text-decoration:underline;
+  color: purple;
+}
