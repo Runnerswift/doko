@@ -6,16 +6,16 @@ head
   title doko: check location
   link(href='checkLocation.css' type='text/css' rel='stylesheet')
   script(src='checkLocation.js' defer)
+  script(src='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap' defer)
 #usermenu
   img(src='public/img/home.png' id='homeIcon' name='home' title='home')
   img(src='public/img/new.png' id='newIcon' name='new reminder' title='new reminder')
   img(src='public/img/reminders.png' id='remindersIcon' name='reminders' title='reminders')
-  img(src='public/img/settings.png' id='settingsIcon' name='settings' title='log out')
+  img(src='public/img/settings.png' id='settingsIcon' name='settings' title='logout')
 .modal
   .modal-content
     form(method='POST' action='')
-    label Location:
-    input(type='text' name='location' id='location')
+    .map
     br
     input(type='textarea' name='reminder' rows='4' id = 'reminder' placeholder='type your reminder here')
     br

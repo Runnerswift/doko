@@ -5,7 +5,9 @@ onload = (function() {
       window.location.replace("/checkLocation");
     };
   
-  var newIcon = document.getElementById("newIcon");
+var newIcon = document.getElementById("newIcon");
+
+  //MODAL POP-UP FOR NEW REMINDER
     var modal = document.querySelector(".modal");
     var trigger = document.querySelector(".trigger");
     var closeButton = document.querySelector(".close-button");
@@ -25,24 +27,28 @@ onload = (function() {
       window.addEventListener("click", windowOnClick);
       });
 
-  var reminders = document.getElementById("remindersIcon")
-     reminders.onclick = function() {
-       window.location.replace("/myReminders");
-     };
+   //MAP
+     function myMap() {
+       var mapCanvas = document.getElementById("map");
+       var mapOptions = {
+         center: new google.maps.LatLng(51.5, -0.2),
+         zoom: 10
+       };
+       var map = new google.maps.Map(mapCanvas, mapOptions);
+     } 
 
-  var logout = document.getElementById("settingsIcon")
-     logout.onclick = function() {
-       window.location.replace("/");
-     };
+var reminders = document.getElementById("remindersIcon")
+   reminders.onclick = function() {
+     window.location.replace("/myReminders");
+   };
 
-  button = this.document.getElementById('clickDoko');
-     button.onclick = function() {
-       prompt(`Where are you?`);
+var logout = document.getElementById("settingsIcon")
+   logout.onclick = function() {
+     window.location.replace("/");
      };
+  
+button = this.document.getElementById('clickDoko');
+   button.onclick = function() {
+     prompt(`Where are you?`);
 
-  /* button = document.getElementById('clickDoko');
-      button.onclick = function() {
-        import swal from 'sweetalert';
-        let ask = swal("Where Are You?");
-          }
-  */
+};

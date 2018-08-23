@@ -1,6 +1,6 @@
 html {
   background-color: #690c62;
-  color: darkpurple;
+  color: white;
   font-family: Yu Mincho, Helvetica, Arial, sans-serif;
   text-align: center;
 }
@@ -9,16 +9,12 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 1px solid rgb(116, 27, 101);
-  background-color: #855396;
-  color:white;
+  border: 1px solid #360632;
+  background-color: #B54BAD;
   border-radius: 10px;
-  word-spacing: 50px;
-}
-
-#usermenu > p:hover {
-  color:purple;
-  font-weight: bold;
+  float:center;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 
 #homeIcon , #settingsIcon , #newIcon, #remindersIcon {
@@ -27,26 +23,16 @@ html {
   padding: 15px;
 }
 
-#location {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+#welcomeMessage {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #clickDoko {
-  margin: 20px;
+  margin: 10px;
   height: 100px;
   width: 100px;
-}
-
-#location > p {
-  text-align: center;
-  font-weight: bold;
-}
-
-#clickMessage {
-  color:white;
 }
 
 /* MODAL STUFF */
