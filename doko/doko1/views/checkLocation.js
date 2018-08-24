@@ -1,5 +1,5 @@
 onload = (function() {
-  
+   
   let home = document.getElementById("homeIcon");
     home.onclick = function() {
       window.location.replace("/checkLocation");
@@ -27,16 +27,6 @@ var newIcon = document.getElementById("newIcon");
       window.addEventListener("click", windowOnClick);
       });
 
-   //MAP
-     function myMap() {
-       var mapCanvas = document.getElementById("map");
-       var mapOptions = {
-         center: new google.maps.LatLng(51.5, -0.2),
-         zoom: 10
-       };
-       var map = new google.maps.Map(mapCanvas, mapOptions);
-     } 
-
 var reminders = document.getElementById("remindersIcon")
    reminders.onclick = function() {
      window.location.replace("/myReminders");
@@ -47,7 +37,7 @@ var logout = document.getElementById("settingsIcon")
      window.location.replace("/");
      };
   
-button = this.document.getElementById('clickDoko');
+button = document.getElementById('clickDoko');
    button.onclick = function() {
      prompt(`Where are you?`);
 

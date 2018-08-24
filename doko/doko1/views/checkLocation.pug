@@ -5,6 +5,7 @@ head
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
   title doko: check location
   link(href='checkLocation.css' type='text/css' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet')
   script(src='checkLocation.js' defer)
   script(src='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap' defer)
 #usermenu
@@ -14,14 +15,13 @@ head
   img(src='public/img/settings.png' id='settingsIcon' name='settings' title='logout')
 .modal
   .modal-content
-    form(method='POST' action='')
+    form(method='POST' action='' id='newReminders')
     input(type-'text' name='location' id='location' placeholder='location')
     br
-    input(type='textarea' name='reminder' rows='4' id= 'reminder' placeholder='type your reminder here')
+    input(type='textarea' name='reminder' rows='4' id='reminder' placeholder='type your reminder here')
     br
-    button(id='saveButton') SAVE
+    button(id='saveButton') save
   span.close-button &times;
 #welcomeMessage
-img(src='public/img/dokologo1.png' id='clickDoko' name='doko' title='click doko!')
-p#clickMessage
-  | click doko to check for reminders!
+  img(src='public/img/dokologo1.png' id='clickDoko' name='doko' title='click doko!')
+  img(src='public/img/clickdokotext.png' id='clickDokoText' name='clickDokoText' title='click doko text!')

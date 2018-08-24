@@ -1,28 +1,21 @@
 html {
   background-color: #690c62;
-  color: darkpurple;
   font-family: Yu Mincho, Helvetica, Arial, sans-serif;
   text-align: center;
-}
-
-#h1 , #h3 {
-  font-weight: 400;
-  letter-spacing: 2px;
   color: white;
 }
 
-#dokologo {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+#login {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
-#dokologo > img {
-  padding: 0px;
-  height: 100px;
-  width: 100px;
-  margin-bottom:20px;
+#dokoText {
+  height: 50%;
+  width: 50%;
+  padding-bottom: 1%;
 }
 
 input[type="email"], input[type="password"] {
@@ -32,17 +25,14 @@ text-align: center;
 border: 1px solid rgb(116, 27, 101);
 }
 
-p {
-    color: white;
-}
-
 button {
 background-color: #af5da2;
 color: white;
 border-radius: 10px;
 display: inline-block;
-font-display: Yu Mincho, Helvetica, Arial, sans-serif;
 letter-spacing: 1px;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 70%;
 }
 
 #createuser {
@@ -55,6 +45,5 @@ letter-spacing: 1px;
 }
 
 #createuser > p > a:hover {
-  text-decoration:underline;
-  color: purple;
+  color: rgb(252, 36, 36);
 }

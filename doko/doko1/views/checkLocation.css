@@ -23,15 +23,21 @@ html {
 }
 
 #welcomeMessage {
-  position: relative;
+  position: fixed;
+  transform: translate(-50%, -50%);
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
 }
 
 #clickDoko {
   margin: 10px;
-  height: 100px;
-  width: 100px;
+  height: 50%;
+  width: 50%;
+}
+
+#clickDokoText {
+  height: 80%;
+  width: 80%;
 }
 
 /* MODAL STUFF */
@@ -47,6 +53,7 @@ html {
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 1000000000;
 }
 .modal-content {
   display: flex;
@@ -71,7 +78,7 @@ html {
   flex-shrink: inherit;
   flex-wrap: wrap;
   justify-items: center;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: none;
   margin-bottom: 5px;
   width: 100%;
@@ -85,12 +92,12 @@ html {
   flex-wrap: wrap;
   height: 100px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 15px;
   text-align: center;
 }
 
 .modal-content > #saveButton {
-  border-radius: 0.25rem;
+  border-radius: 15px;
   color: darkviolet;
   width: 100px;
   height: 25px;

@@ -7,16 +7,14 @@ head
   style
     include indexstyles.css
   script(src='index.js' defer='')
-#h1
-  h1 welcome to doko!
-#dokologo
-  img(src='public/img/dokologo1.png')
-div(id='login>\
-<form action=' method='post' enctype='application/x-www-form-urlencoded')
-  input(type='email' name='email' size='20' placeholder='email')
-  input(type='password' name='password' size='20' placeholder='password' minlength='8')
-  button(type='submit' name= 'sign_in' id='button') SIGN IN
-#createuser
-  p
-    | Need an account? 
-    a(href='createUser') Sign-Up for free!  
+#login
+  img(src='public/img/dokotext.png' id='dokoText')
+  div(id='login>\
+  <form action=' method='post' enctype='application/x-www-form-urlencoded')
+    input(type='email' name='email' size='20' placeholder='email' id='loginEmail')
+    input(type='password' name='password' size='20' placeholder='password' minlength='8' id='loginPass')
+    button(type='submit' name= 'sign_in' id='button') Log In
+  #createuser
+    p
+      | Need an account? 
+      a(href='createUser') Sign-Up for free!  

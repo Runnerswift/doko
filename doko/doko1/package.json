@@ -4,6 +4,7 @@
   "description": "doko app",
   "main": "index.js",
   "dependencies": {
+    "assert": "^1.4.1",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "less": "^3.8.1",
