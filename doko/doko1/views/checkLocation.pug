@@ -3,9 +3,11 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  title doko: check location
+  title d o k o
   link(href='checkLocation.css' type='text/css' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet')
+  link(rel='icon' type='image/png' sizes='96x96' href='public/img/fav/favicon-96x96.png')
+  link(rel='manifest' href='public/img/fav/manifest.json')
   script(src='checkLocation.js' defer)
   script(src='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap' defer)
 #usermenu
@@ -16,12 +18,19 @@ head
 .modal
   .modal-content
     form(method='POST' action='' id='newReminders')
-    input(type-'text' name='location' id='location' placeholder='location')
+    input(type='text' name='location' id='location' placeholder='location')
     br
     input(type='textarea' name='reminder' rows='4' id='reminder' placeholder='type your reminder here')
     br
     button(id='saveButton') save
   span.close-button &times;
+.modal2
+  .modal-content2
+    form(method="POST" action='' id='checkReminders')
+    input(type='text' name='checkLocation' id='checkLocation' placeholder='where are you?')
+    br
+    button(id='searchButton') search
+  span.close-button2 &times;
 #welcomeMessage
   img(src='public/img/dokologo1.png' id='clickDoko' name='doko' title='click doko!')
   img(src='public/img/clickdokotext.png' id='clickDokoText' name='clickDokoText' title='click doko text!')

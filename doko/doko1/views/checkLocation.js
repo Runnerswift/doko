@@ -1,9 +1,9 @@
 onload = (function() {
    
-  let home = document.getElementById("homeIcon");
-    home.onclick = function() {
-      window.location.replace("/checkLocation");
-    };
+let home = document.getElementById("homeIcon");
+  home.onclick = function() {
+  window.location.replace("/checkLocation");
+  };
   
 var newIcon = document.getElementById("newIcon");
 
@@ -25,7 +25,7 @@ var newIcon = document.getElementById("newIcon");
       newIcon.addEventListener("click", toggleModal);
       closeButton.addEventListener("click", toggleModal);
       window.addEventListener("click", windowOnClick);
-      });
+      
 
 var reminders = document.getElementById("remindersIcon")
    reminders.onclick = function() {
@@ -36,9 +36,23 @@ var logout = document.getElementById("settingsIcon")
    logout.onclick = function() {
      window.location.replace("/");
      };
-  
-button = document.getElementById('clickDoko');
-   button.onclick = function() {
-     prompt(`Where are you?`);
 
-};
+var modal2 = document.querySelector(".modal2");
+var trigger2 = document.querySelector(".trigger2");
+var closeButton2 = document.querySelector(".close-button2");
+  
+  function toggleModal2() {
+    modal2.classList.toggle("show-modal2");
+  };
+  
+  function windowOnClick(event) {
+    if (event.target === modal2) {
+       toggleModal2();
+    }
+  };
+
+  clickDoko.addEventListener("click", toggleModal2);
+  closeButton.addEventListener("click", toggleModal2);
+  window.addEventListener("click", windowOnClick);
+
+});

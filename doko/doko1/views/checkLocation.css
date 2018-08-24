@@ -124,3 +124,70 @@ html {
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+
+/* MODAL 2 */
+
+.modal2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 1000000000;
+}
+
+.modal-content2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(247, 174, 241);
+  color: darkviolet;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+}
+
+#checkLocation {
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-content2 > #searchButton {
+  border-radius: 15px;
+  color: darkviolet;
+  width: 100px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.close-button2 {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.close-button2:hover {
+  background-color: darkviolet;
+}
+
+.show-modal2 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
