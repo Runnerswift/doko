@@ -1,6 +1,3 @@
-const jquery = require('jquery');
-
-
 //SERVER
   const express = require('express');
   const app = express();
@@ -64,8 +61,8 @@ const jquery = require('jquery');
 
   router.post('/insert', function(req, res, next){
     var geoLocation = {
-    title: req.body.modal.location,
-    content: req.body.modal.reminder
+    title: req.body.location,
+    content: req.body.reminder
   };
 
   mongo.connect(url, function(err, db){
