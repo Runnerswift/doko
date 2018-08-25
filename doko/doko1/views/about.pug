@@ -4,10 +4,10 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
   title d o k o
-  link(href='css/checkLocation.css' type='text/css' rel='stylesheet')
+  link(href='css/about.css' type='text/css' rel='stylesheet')
   link(rel='icon' type='image/png' sizes='96x96' href='public/img/fav/favicon-96x96.png')
   link(rel='manifest' href='public/img/fav/manifest.json')
-  script(src='js/checkLocation.js' defer)
+  script(src='js/about.js' defer)
 #usermenu
   img(src='public/img/home.png' id='homeIcon' name='home' title='home')
   img(src='public/img/new.png' id='newIcon' name='new reminder' title='new reminder')
@@ -22,14 +22,17 @@ head
     br
     button(id='saveButton') save
   span.close-button &times;
-.modal2
-  .modal-content2
-    form(method="POST" action='' id='checkReminders')
-    input(type='text' name='checkLocation' id='checkLocation' placeholder='where are you?')
-    br
-    button(id='searchButton') search
-  span.close-button2 &times;
-#welcomeMessage
-  img(src='public/img/dokologo1.png' id='clickDoko' name='doko' title='click doko!')
-  img(src='public/img/clickdokotext.png' id='clickDokoText' name='clickDokoText' title='click doko text!')
-img(src='public/img/about.png' id='aboutIcon' name='about' title='about')
+img(src='public/img/whatisdoko.png' id='whatIs' name='whatIs' title='what is doko?')
+br
+p Have you ever gone to the store and forgot to pick something up? Maybe you were visiting a friend and forgot to invite them to a birthday party. Isn't it annoying when you spend an evening relaxing at home and just before bed you remember that you were supposed to prepare your lunch for the next day? Wouldn't it be helpful to have an app on your phone that could detect your location and then remind you of anything? 
+br
+p Doko does that!
+br
+p
+  | It&apos;s as simple as signing up for a free account, clicking the 
+  img#exampleNew(src='public/img/new.png')
+  |  and telling doko what to remind you of when you next go to work, downtown, or anywhere!
+br
+#createuser
+   p
+     a(href='createUser') Need an account? Sign-Up for free!  

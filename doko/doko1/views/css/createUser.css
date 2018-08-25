@@ -5,9 +5,16 @@ html {
   text-align: center;
 }
 
-#h1 , #h3 {
-  font-weight: 400;
-  letter-spacing: 2px;
+#overCreate {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#overCreate > img {
+  height: 45%;
+  width: 45%;
 }
 
 input[type="email"] , input[type="password"] {
@@ -18,19 +25,24 @@ input[type="email"] , input[type="password"] {
   margin: 5px;
 }
 
-p {
-    color: white;
-}
-
 button {
 display: flex;
 flex-direction: row;
-width: 200px;
+width: 10%;
 background-color: #af5da2;
 color: white;
 border-radius: 10px;
 display: inline-block;
 font-display: Yu Mincho, Helvetica, Arial, sans-serif;
 letter-spacing: 1px;
-margin: 35px;
+margin: 1%;
+}
+
+#aboutIcon {
+  position: absolute;
+  height: 1%;
+  width: 1%;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
 }

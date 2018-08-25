@@ -191,3 +191,12 @@ html {
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+
+#aboutIcon {
+  position: absolute;
+  height: 1%;
+  width: 1%;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}

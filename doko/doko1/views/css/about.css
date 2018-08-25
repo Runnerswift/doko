@@ -1,7 +1,7 @@
 html {
   background-color: #690c62;
-  color: darkpurple;
-  font-family: Yu Mincho, Helvetica, Arial, sans-serif;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -9,70 +9,40 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 1px solid rgb(116, 27, 101);
-  background-color: #855396;
-  color:white;
+  border: 1px solid #360632;
+  background-color: #B54BAD;
   border-radius: 10px;
-  word-spacing: 50px;
-  position: fixed;
+  float:center;
   width: 100%;
 }
 
-#usermenu > p:hover {
-  color:purple;
-  font-weight: bold;
-}
-
-#homeIcon , #newIcon , #remindersIcon , #settingsIcon {
+#homeIcon , #settingsIcon , #newIcon, #remindersIcon {
   width: 20px;
   height: 20px;
   padding: 15px;
 }
 
-ul {
-/*  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: auto;
-  grid-gap: 10px; */
-  float: none;
-  width: 33%;
-  height: 70%;
-  justify-items: center;
-} 
-
-li {
-  list-style: none;
-  justify-content: stretch;
-  margin: 2px;
-  padding: 10px;
-  text-align: center;
-  background-color: #855396
+#whatIs {
+  height: 30%;
+  width: 30%;
 }
 
-#reminders {
+#exampleNew {
+  display: inline;
+  height: 2%;
+  width: 2%;
+}
+
+p {
+  display: inline-block;
+  width: 45%;
+  top: 50%;
+  left: 50%;
+}
+
+#createuser > p > a {
+  text-decoration: none;
   color:white;
-  overflow-y: hidden;
-}
-
-#reminders > ul > li {
-  text-align: center;
-  border: 1px solid #500f47;
-  border-radius: 10px;
-  line-height: 50px;
-  vertical-align: middle;
-}
-
-#reminders > ul > li > img {
-  padding-top: 15px;
-  padding-left:10px;
-  height: 20px;
-  width: 20px;
-}
-
-#reminders > ul > li > #deleteIcon {
-  width: 10px;
-  height: 10px;
-  padding-top: 20px;
 }
 
 /* MODAL STUFF */
@@ -88,6 +58,7 @@ li {
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 1000000000;
 }
 .modal-content {
   display: flex;
@@ -112,7 +83,7 @@ li {
   flex-shrink: inherit;
   flex-wrap: wrap;
   justify-items: center;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: none;
   margin-bottom: 5px;
   width: 100%;
@@ -126,12 +97,12 @@ li {
   flex-wrap: wrap;
   height: 100px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 15px;
   text-align: center;
 }
 
 .modal-content > #saveButton {
-  border-radius: 0.25rem;
+  border-radius: 15px;
   color: darkviolet;
   width: 100px;
   height: 25px;

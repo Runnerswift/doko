@@ -47,3 +47,12 @@ font-size: 70%;
 #createuser > p > a:hover {
   color: rgb(252, 36, 36);
 }
+
+#aboutIcon {
+  position: absolute;
+  height: 1%;
+  width: 1%;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}

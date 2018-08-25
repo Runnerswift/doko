@@ -4,19 +4,17 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
   title sign up for doko
-  link(href='createUser.css' type='text/css' rel='stylesheet')
+  link(href='css/createUser.css' type='text/css' rel='stylesheet')
   link(rel='icon' type='image/png' sizes='96x96' href='public/img/fav/favicon-96x96.png')
   link(rel='manifest' href='public/img/fav/manifest.json')
-  script(src='createUser.js' defer='')
-#headerText
-  h1 start a new account
+  script(src='js/createUser.js' defer='')
 #overCreate
+  img(src='public/img/signUp.png' id='signUp' name='signUp' title='sign up')
   #createUser
     form#usernamepassword
-      label Email Address:
       input(type='email' placeholder='email')
-      label Password:
       input(type='password' placeholder='create a password')
   #buttons
-    button(type='submit' id='signUp') Sign Up
-    button(type='submit' id='cancel') Cancel
+    button(type='submit' id='signUp') done
+    button(type='submit' id='cancel') cancel
+img(src='public/img/about.png' id='aboutIcon' name='about' title='about')

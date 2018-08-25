@@ -7,4 +7,9 @@ onload = function() {
   login.onclick = function() {
       window.location.replace("/checkLocation");
     }
+
+  let about = document.getElementById("aboutIcon");
+    about.onclick = function() {
+    window.location.replace("/about");
+    };
 };

@@ -34,3 +34,8 @@ onload = (function() {
     logout.onclick = function() {
       window.location.replace("/");
     };
+    
+  let about = document.getElementById("aboutIcon");
+    about.onclick = function() {
+    window.location.replace("/about");
+    };

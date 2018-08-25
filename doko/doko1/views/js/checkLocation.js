@@ -55,4 +55,8 @@ var closeButton2 = document.querySelector(".close-button2");
   closeButton.addEventListener("click", toggleModal2);
   window.addEventListener("click", windowOnClick);
 
+let about = document.getElementById("aboutIcon");
+    about.onclick = function() {
+    window.location.replace("/about");
+    };  
 });

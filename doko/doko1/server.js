@@ -1,80 +1,92 @@
-const express = require('express');
 const jquery = require('jquery');
-const app = express();
-const port = 3000;
-const router = express.Router();
-const mongo = require('mongodb');
-const assert = require('assert');
-const url = 'mongodb://localhost:27017/doko';
 
-app.listen(3000, function() {
-  console.log(`doko app listening on port ${port}`);
-});
 
-app.set('view engine', 'pug');
-app.use(express.static('views'));
+//SERVER
+  const express = require('express');
+  const app = express();
+  const port = 3000;
+  const router = express.Router();
 
-app.get('/', (req, res) => {
-  res.render('index');
+  app.listen(3000, function() {
+    console.log(`doko app listening on port ${port}`);
   });
 
-app.get('/checkLocation', (req, res) => {
-  res.render('checkLocation');
-});
 
-app.get('/createReminder', (req, res) => {
-  res.render('createReminder');
-})
+//ROUTING
+  app.set('view engine', 'pug');
+  app.use(express.static('views'));
 
-app.get('/myReminders', (req, res) => {
-  res.render('myReminders');
-});
+  app.get('/', (req, res) => {
+    res.render('index');
+    });
 
-app.get('/createUser', (req, res) => {
-  res.render('createUser');
-});
+  app.get('/checkLocation', (req, res) => {
+    res.render('checkLocation');
+  });
 
-
-
-router.get('/get-data', function(req, res, next){
-  var resultArray = [];
-  mongo.connect(url, function(err, db){
-    assert.equal(null,err);
-    var cursor = db.collection('reminders').find();
-      cursor.forEach(function(doc, err) {
-        assert.equal(null, err);
-        resultArray.push(doc);
-      }, function(){
-        db.close();
-        res.render('myReminders', {items: resultArray});
-      })
+  app.get('/createReminder', (req, res) => {
+    res.render('createReminder');
   })
 
-}); 
+  app.get('/myReminders', (req, res) => {
+    res.render('myReminders');
+  });
 
+  app.get('/createUser', (req, res) => {
+    res.render('createUser');
+  });
 
+  app.get('/about', (req,res) => {
+    res.render('about');
+  });
+  
 
-router.post('/insert', function(req, res, next){
-  var geoLocation = {
-    title: req.body.location,
-    content: req.body.reminder
+//DATABASE STUFF
+  const mongo = require('mongodb');
+  const assert = require('assert');
+  const url = 'mongodb://localhost:27017/doko';
+
+  router.get('/get-data', function(req, res, next){
+    var resultArray = [];
+    mongo.connect(url, function(err, db){
+      assert.equal(null,err);
+      var cursor = db.collection('reminders').find();
+        cursor.forEach(function(doc, err) {
+          assert.equal(null, err);
+          resultArray.push(doc);
+        }, function(){
+          db.close();
+          res.render('myReminders', {items: resultArray});
+        })
+    })
+
+  }); 
+
+  router.post('/insert', function(req, res, next){
+    var geoLocation = {
+    title: req.body.modal.location,
+    content: req.body.modal.reminder
   };
 
-mongo.connect(url, function(err, db){
-  assert.equal(null, err);
-  db.collection('reminders').insertOne(item, function(err, result) {
+  mongo.connect(url, function(err, db){
     assert.equal(null, err);
-    console.log('Item inserted');
-    db.close();
+    db.collection('reminders').insertOne(item, function(err, result) {
+      assert.equal(null, err);
+      console.log('Item inserted');
+      db.close();
+    })
   })
-})
-  res.redirect('/checkLocation');
-});
+    res.redirect('/checkLocation');
+  });
 
-router.post('/update', function(req, res, next){
 
-});
 
-router.post('/delete', function(req, res, next){
+  router.post('/update', function(req, res, next){
 
-});
+  });
+
+
+
+  router.post('/delete', function(req, res, next){
+
+  });
