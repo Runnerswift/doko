@@ -7,6 +7,7 @@ head
   link(href='css/checkLocation.css' type='text/css' rel='stylesheet')
   link(rel='icon' type='image/png' sizes='96x96' href='public/img/fav/favicon-96x96.png')
   link(rel='manifest' href='public/img/fav/manifest.json')
+  link(href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet')
   script(src='js/checkLocation.js' defer)
 #usermenu
   img(src='public/img/home.png' id='homeIcon' name='home' title='home')
@@ -15,13 +16,13 @@ head
   img(src='public/img/settings.png' id='settingsIcon' name='settings' title='logout')
 .modal
   .modal-content
-    form(method='POST' action='' id='newReminders')
-    input(type='text' name='location' id='location' placeholder='location')
-    br
-    input(type='textarea' name='reminder' rows='4' id='reminder' placeholder='type your reminder here')
-    br
-    button(id='saveButton') save
-  span.close-button &times;
+    form(method='POST' action='/insert' id='newReminders')
+      input(type='text' name='location' id='location' placeholder='location')
+      br
+      input(type='textarea' name='reminder' rows='4' id='reminder' placeholder='type your reminder here')
+      br
+      button(type='submit' id='saveButton') save
+    span.close-button &times;
 .modal2
   .modal-content2
     form(method="POST" action='' id='checkReminders')

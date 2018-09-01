@@ -37,6 +37,8 @@ var logout = document.getElementById("settingsIcon")
      window.location.replace("/");
      };
 
+//MODAL FOR SEARCHING DOKO
+
 var modal2 = document.querySelector(".modal2");
 var trigger2 = document.querySelector(".trigger2");
 var closeButton2 = document.querySelector(".close-button2");

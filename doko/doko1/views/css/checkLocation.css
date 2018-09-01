@@ -1,7 +1,7 @@
 html {
   background-color: #690c62;
   color: white;
-  font-family: Yu Mincho, Helvetica, Arial, sans-serif;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -33,7 +33,12 @@ html {
   margin: 10px;
   height: 50%;
   width: 50%;
-}
+  }
+
+ #clickDoko:hover {
+  box-shadow: 5px 5px 10px #360632;
+  border-radius: 1000px;
+ } 
 
 #clickDokoText {
   height: 80%;
