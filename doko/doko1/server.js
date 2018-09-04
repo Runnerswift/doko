@@ -1,20 +1,15 @@
-//SERVER
 const express = require('express');
 const app = express();
 const port = 3000;
-const router = express.Router();
 
 app.listen(3000, function () {
   console.log(`doko app listening on port ${port}`);
 });
 
-
-//ROUTING
 app.set('view engine', 'pug');
 app.use(express.static('views'));
 
 app.get('/', (req, res) => {
-  console.log('signal received');
   res.render('index');
 });
 
@@ -38,7 +33,6 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
-//DATABASE STUFF
 const mongo = require('mongodb');
 const assert = require('assert');
 const url = 'mongodb://localhost:27017/doko';
@@ -59,29 +53,29 @@ app.get('/get-data', function (req, res, next) {
 
 });
 
-app.post('/insert', (req, res)  => {
+app.post('/insert', (req, res) => {
   var dokoEntry = {
-   title: req.body.location,
-   content: req.body.reminder
- };
+    where1: req.body.where1,
+    reminder: req.body.reminder
+  };
 
- mongo.connect(url, function (err, db) {
-   assert.equal(null, err);
-   db.collection('reminders').insertOne(item, function (err, result) {
-     assert.equal(null, err);
-     console.log('Reminder inserted');
-     db.close();
-   })
- })
- res.redirect('/checkLocation'); 
-})
+  mongo.connect(url, function (err, db) {
+    assert.equal(null, err);
+    db.collection('reminders').insertOne(item, (err, result) => {
+      assert.equal(null, err);
+      console.log('Reminder inserted');
+      db.close();
+    })
+  })
+  res.redirect('/checkLocation');
+});
 
-router.post('/update', function (req, res, next) {
+app.post('/update', function (req, res, next) {
 
 });
 
 
 
-router.post('/delete', function (req, res, next) {
+app.post('/delete', function (req, res, next) {
 
 });

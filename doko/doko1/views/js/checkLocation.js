@@ -6,8 +6,7 @@ let home = document.getElementById("homeIcon");
   };
   
 var newIcon = document.getElementById("newIcon");
-
-  //MODAL POP-UP FOR NEW REMINDER
+  
     var modal = document.querySelector(".modal");
     var trigger = document.querySelector(".trigger");
     var closeButton = document.querySelector(".close-button");
@@ -36,8 +35,6 @@ var logout = document.getElementById("settingsIcon")
    logout.onclick = function() {
      window.location.replace("/");
      };
-
-//MODAL FOR SEARCHING DOKO
 
 var modal2 = document.querySelector(".modal2");
 var trigger2 = document.querySelector(".trigger2");

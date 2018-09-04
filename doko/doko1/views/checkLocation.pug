@@ -17,12 +17,13 @@ head
 .modal
   .modal-content
     form(method='POST' action='/insert' id='newReminders')
-      input(type='text' name='location' id='location' placeholder='location')
+      input(type='text' name='where1' id='where1' placeholder='location')
       br
       input(type='textarea' name='reminder' rows='4' id='reminder' placeholder='type your reminder here')
       br
       button(type='submit' id='saveButton') save
     span.close-button &times;
+body   
 .modal2
   .modal-content2
     form(method="POST" action='' id='checkReminders')
