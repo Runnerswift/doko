@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const bodyparser = require('body-parser');
+const urlencodeParser = bodyparser.urlencoded({extended:false});
 
 app.listen(3000, function () {
   console.log(`doko app listening on port ${port}`);
@@ -53,8 +55,11 @@ app.get('/get-data', function (req, res, next) {
 
 });
 
-app.post('/insert', (req, res) => {
+app.post('/insert', urlencodeParser, (req, res) => {
+  
+  console.log(req.body);
   var dokoEntry = {
+  
     where1: req.body.where1,
     reminder: req.body.reminder
   };

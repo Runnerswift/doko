@@ -14,6 +14,7 @@ head
   img(src='public/img/new.png' id='newIcon' name='new reminder' title='new reminder')
   img(src='public/img/reminders.png' id='remindersIcon' name='reminders' title='reminders')
   img(src='public/img/settings.png' id='settingsIcon' name='settings' title='logout')
+body
 .modal
   .modal-content
     form(method='POST' action='/insert' id='newReminders')
@@ -23,7 +24,6 @@ head
       br
       button(type='submit' id='saveButton') save
     span.close-button &times;
-body   
 .modal2
   .modal-content2
     form(method="POST" action='' id='checkReminders')

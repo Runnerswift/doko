@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "assert": "^1.4.1",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "less": "^3.8.1",
     "mdbootstrap": "^4.5.9",

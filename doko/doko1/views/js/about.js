@@ -2,7 +2,7 @@ onload = (function() {
    
   let home = document.getElementById("homeIcon");
     home.onclick = function() {
-    window.location.replace("/checkLocation");
+    window.location.replace("/");
     };
     
   var newIcon = document.getElementById("newIcon");
